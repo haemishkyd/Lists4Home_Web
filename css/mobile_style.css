@@ -1,0 +1,47 @@
+.guide_pics
+{
+	border:1px solid white;
+	height: 328;
+	width: 602;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.l4h_icon
+{
+	height: 30px;
+}
+
+.l4h_shopping_list_table
+{
+	width: 100%;
+	table-layout: fixed;
+}
+
+#checkbox_column
+{
+	width: 10%;
+	text-align: center;
+}
+#item_column
+{
+	width: 90%;
+}
+
+#bought_recently-popup {
+    right: 0px !important;
+    left: auto !important;
+}
+#bought_recently {
+    width: 300px;
+    border: 1px solid #000;
+    border-right: none;
+    background: rgba(0,0,0,.5);
+    margin: -1px 0;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+#bought_recently .ui-btn {
+    margin: 2em 15px;
+}
