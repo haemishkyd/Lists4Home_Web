@@ -22,7 +22,7 @@ if (mysql_num_rows($result) > 0) {
 if ($user_id != "None")
 {
     // get all products from products table
-    $result = mysql_query("select items.Item from haemishk_listsforhome.sl_items items,haemishk_listsforhome.sl_list lists where items.item_id=lists.item_id and lists.user_id='".$user_id."';") or die(mysql_error());
+    $result = mysql_query("select items.Item,lists.ItemComment from haemishk_listsforhome.sl_items items,haemishk_listsforhome.sl_list lists where items.item_id=lists.item_id and lists.user_id='".$user_id."';") or die(mysql_error());
     
     // check for empty result
     if (mysql_num_rows($result) > 0) {
@@ -34,6 +34,7 @@ if ($user_id != "None")
             // temp user array
             $product = array();
             $product["item"] = $row["Item"];
+            $product["comment"] = $row["ItemComment"];
     
             // push single product into final response array
             array_push($response["products"], $product);

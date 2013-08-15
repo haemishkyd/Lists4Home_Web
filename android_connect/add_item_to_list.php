@@ -38,6 +38,8 @@ if ($user_id != "None")
         }
         else 
         {
+            $commenttring = "comment".strval($prodindex);
+            $item_comment = $_GET[$commenttring];
             $result = run_select_on_db("INSERT INTO sl_list(Item_ID,Category_ID,User_ID,ItemComment) VALUES('$item_id','$cat_id','" . $user_id . "','$item_comment')", $db);
             
             // success
